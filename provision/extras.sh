@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum -y install vim openldap-servers openldap-clients
+yum -y install vim openldap-servers openldap-clients httpd-tools
 
 # LDAP
 systemctl enable slapd
