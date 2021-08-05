@@ -74,3 +74,11 @@ vagrant up
 ```
 
 In this way only two virtual machines are created, the **master** with 4GB and all services on it and **extras** with NFS and LDAP.
+
+
+### Login
+
+htpasswd -Bbc /etc/origin/master/htpasswd developer 4linux
+oc adm policy add-cluster-role-to-user  cluster-admin developer
+
+
