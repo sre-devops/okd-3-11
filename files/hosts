@@ -15,7 +15,9 @@ openshift_master_default_subdomain='172-27-11-10.nip.io'
 openshift_disable_check='disk_availability,memory_availability,docker_storage'
 openshift_docker_options='--selinux-enabled --log-driver=journald --signature-verification=false --insecure-registry=172.30.0.0/16 --exec-opt native.cgroupdriver=systemd'
 openshift_master_identity_providers=[{'name': 'HTPASSWD', 'challenge': 'true', 'login': 'true', 'kind':'HTPasswdPasswordIdentityProvider', 'mappingMethod': 'claim'}]
-
+openshift_disable_check=docker_image_availability
+openshift_disable_check=memory_availability
+openshift_disable_check=docker_image_availability
 [masters]
 okd.example.com openshift_public_ip='172.27.11.10' openshift_public_hostname='okd.example.com'
 
