@@ -14,6 +14,8 @@ Vagrant.configure('2') do |config|
   vms.each do |name, conf|
     config.vm.define "#{name}" do |k|
       k.vm.hostname = "#{conf['host']}.example.com"
+      k.vm.network "public_network",
+        use_dhcp_assigned_default_route: true
       k.vm.network 'private_network', ip: "172.27.11.#{conf['ip']}"
       k.vm.provider 'virtualbox' do |vb|
         vb.memory = conf['memory']
