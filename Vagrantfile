@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 vms = {
-  'extras' => {'memory' => '256', 'cpus' => 1, 'ip' => '40', 'host' => 'extras', 'provision' => 'extras.sh'},
+  'extras' => {'memory' => '512', 'cpus' => 1, 'ip' => '40', 'host' => 'extras', 'provision' => 'extras.sh'},
   'master' => {'memory' => '4608', 'cpus' => 2, 'ip' => '10', 'host' => 'okd', 'provision' => 'allinone.sh'}
 }
 
